@@ -118,6 +118,12 @@ REACTJS-EJERCICIOS [MSL-UBUNTU]/
 
 ## 🚀 Despliegue con Vite (GitHub Pages)
 
+### Opción recomendada (GitHub Actions)
+1. Subir el repo a GitHub.
+2. En **Settings → Pages**, seleccionar **GitHub Actions** como fuente.
+3. Hacer push a la rama principal: el workflow compila y publica `dist/`.
+
+### Opción manual
 1. Instalar dependencias:
    ```bash
    npm install
@@ -130,7 +136,7 @@ REACTJS-EJERCICIOS [MSL-UBUNTU]/
    ```bash
    npm run build
    ```
-4. Publicar `dist/` en GitHub Pages.
+4. Publicar la carpeta `dist/` en GitHub Pages (por ejemplo, en una rama `gh-pages`).
 
 > Nota: el `base` ya está configurado en `vite.config.js` para `/ReactJS-Ejercicios/`.
 
