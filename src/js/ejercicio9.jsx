@@ -76,7 +76,7 @@ const App = () => {
               />
               <span
                 className={`flex-1 ${
-                  task.completed ? \"line-through text-slate-400\" : \"text-slate-100\"
+                  task.completed ? "line-through text-slate-400" : "text-slate-100"
                 }`}
               >
                 {task.text}
