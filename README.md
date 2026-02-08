@@ -11,9 +11,8 @@ ReactJS – Fundamentos, Componentes, Hooks y Persistencia
 
 ## 🌐 Demo en vivo (GitHub Pages)
 
-🔗 **URL pública del proyecto:**  
-Pendiente de despliegue con Vite.
 
+🔗 **[Ver Proyecto](https://silvanopuccini.github.io/ReactJS-Ejercicios/)**
 ---
 
 ## 🎯 Objetivo del proyecto
