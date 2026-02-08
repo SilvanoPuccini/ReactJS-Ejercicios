@@ -22,24 +22,30 @@ const App = () => {
   }, [color]);
 
   return (
-    <div className="container">
-      <div className="card">
-        <h1>Cambiador de Color de Fondo</h1>
-        <div className="exercise-content">
+    <main className="mx-auto flex min-h-screen max-w-6xl items-center px-6 py-12">
+      <section className="glass-card space-y-6">
+        <header className="space-y-2">
+          <h1>Cambiador de Color de Fondo</h1>
+          <p className="text-slate-300">
+            Genera un color aleatorio y observa el ambiente futurista en tiempo
+            real.
+          </p>
+        </header>
+        <div className="flex flex-wrap items-center gap-4">
           <button
             type="button"
-            className="action-btn"
+            className="btn-primary"
             onClick={() => setColor(getRandomColor())}
           >
             Cambiar color
           </button>
+          {color && <span className="chip">Color actual: {color}</span>}
         </div>
-        {color && <p>Color actual: {color}</p>}
-        <a href="index.html" className="back">
+        <a href="index.html" className="btn-ghost">
           ← Volver al menú
         </a>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

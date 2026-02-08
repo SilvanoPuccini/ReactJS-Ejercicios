@@ -31,43 +31,50 @@ const App = () => {
   };
 
   return (
-    <div className="container">
-      <div className="card">
-        <h1>Calculadora</h1>
-        <div className="exercise-content">
+    <main className="mx-auto flex min-h-screen max-w-6xl items-center px-6 py-12">
+      <section className="glass-card space-y-6">
+        <header className="space-y-2">
+          <h1>Calculadora</h1>
+          <p className="text-slate-300">
+            Opera con números en una consola luminosa de precisión.
+          </p>
+        </header>
+        <div className="grid gap-4 md:grid-cols-2">
           <input
             type="number"
+            className="input-field"
             placeholder="Número 1"
             value={num1}
             onChange={(event) => setNum1(event.target.value)}
           />
           <input
             type="number"
+            className="input-field"
             placeholder="Número 2"
             value={num2}
             onChange={(event) => setNum2(event.target.value)}
           />
         </div>
-        <div className="actions">
-          <button type="button" onClick={() => calculate("+")}>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <button type="button" className="btn-primary" onClick={() => calculate("+")}>
             Sumar
           </button>
-          <button type="button" onClick={() => calculate("-")}>
+          <button type="button" className="btn-secondary" onClick={() => calculate("-")}>
             Restar
           </button>
-          <button type="button" onClick={() => calculate("*")}>
+          <button type="button" className="btn-secondary" onClick={() => calculate("*")}>
             Multiplicar
           </button>
-          <button type="button" onClick={() => calculate("/")}>
+          <button type="button" className="btn-secondary" onClick={() => calculate("/")}>
             Dividir
           </button>
         </div>
-        <p id="result">{result}</p>
-        <a href="index.html" className="back">
+        <p className="chip">{result}</p>
+        <a href="index.html" className="btn-ghost">
           ← Volver al menú
         </a>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

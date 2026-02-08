@@ -38,31 +38,38 @@ const App = () => {
   };
 
   return (
-    <div className="container">
-      <div className="card">
-        <h1>Temporizador</h1>
-        <p id="time">{formatTime(seconds)}</p>
-        <div className="actions">
+    <main className="mx-auto flex min-h-screen max-w-6xl items-center px-6 py-12">
+      <section className="glass-card space-y-6">
+        <header className="space-y-2">
+          <h1>Temporizador</h1>
+          <p className="text-slate-300">
+            Controla el tiempo con un panel de comandos orbital.
+          </p>
+        </header>
+        <p className="text-4xl font-semibold text-neon-cyan">
+          {formatTime(seconds)}
+        </p>
+        <div className="flex flex-wrap gap-3">
           <button
             type="button"
-            className="primary"
+            className="btn-primary"
             onClick={() => setIsRunning(true)}
             disabled={isRunning}
           >
             Iniciar
           </button>
-          <button type="button" className="secondary" onClick={handleStop}>
+          <button type="button" className="btn-secondary" onClick={handleStop}>
             Detener
           </button>
-          <button type="button" className="secondary" onClick={handleReset}>
+          <button type="button" className="btn-secondary" onClick={handleReset}>
             Reset
           </button>
         </div>
-        <a href="index.html" className="back">
+        <a href="index.html" className="btn-ghost">
           ← Volver al menú
         </a>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

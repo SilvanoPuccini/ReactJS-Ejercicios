@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-gradient-to-br from-space-blue via-space-purple to-black text-slate-100 antialiased;
+    font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl font-semibold tracking-tight text-white;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply w-full max-w-3xl rounded-3xl border border-white/10 bg-white/5 p-6 md:p-10 shadow-glow backdrop-blur;
+  }
+
+  .menu-list {
+    @apply mt-8 grid gap-4 md:grid-cols-3;
+  }
+
+  .menu-link {
+    @apply block rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-center font-medium text-slate-100 shadow-glow transition hover:-translate-y-1 hover:border-neon-cyan/40 hover:text-neon-cyan;
+  }
+
+  .exercise-section {
+    @apply mt-6 space-y-4;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-slate-100 placeholder:text-slate-400 shadow-inner outline-none transition focus:border-neon-cyan/60 focus:ring-2 focus:ring-neon-cyan/20;
+  }
+
+  .textarea-field {
+    @apply input-field min-h-[140px];
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-neon-cyan px-5 py-2.5 font-semibold text-space-blue shadow-glow transition hover:scale-[1.02] hover:shadow-neon;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-neon-cyan/40 bg-transparent px-5 py-2.5 font-semibold text-neon-cyan shadow-glow transition hover:bg-neon-cyan/10;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-neon-pink/40 hover:text-neon-pink;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-neon-pink/40 bg-white/5 px-3 py-1 text-sm font-medium text-neon-pink shadow-glow;
+  }
+}

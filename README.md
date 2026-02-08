@@ -114,6 +114,7 @@ REACTJS-EJERCICIOS [MSL-UBUNTU]/
 - CSS3  
 - ReactJS  
 - Vite  
+- Tailwind CSS  
 
 ## 🚀 Despliegue con Vite (GitHub Pages)
 

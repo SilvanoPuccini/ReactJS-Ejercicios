@@ -23,25 +23,36 @@ const App = () => {
   }, [query]);
 
   return (
-    <div className="container">
-      <div className="card">
-        <h1>Filtro en tiempo real</h1>
+    <main className="mx-auto flex min-h-screen max-w-6xl items-center px-6 py-12">
+      <section className="glass-card space-y-6">
+        <header className="space-y-2">
+          <h1>Filtro en tiempo real</h1>
+          <p className="text-slate-300">
+            Busca frutas en una interfaz con feedback instantáneo.
+          </p>
+        </header>
         <input
           type="text"
+          className="input-field"
           placeholder="Buscar..."
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
-        <ul>
+        <ul className="exercise-section">
           {filteredItems.map((item) => (
-            <li key={item}>{item}</li>
+            <li
+              key={item}
+              className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+            >
+              {item}
+            </li>
           ))}
         </ul>
-        <a href="index.html" className="back">
+        <a href="index.html" className="btn-ghost">
           ← Volver al menú
         </a>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

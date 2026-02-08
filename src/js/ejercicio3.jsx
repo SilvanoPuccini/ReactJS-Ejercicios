@@ -19,35 +19,48 @@ const App = () => {
   };
 
   return (
-    <div className="container">
-      <div className="card">
-        <h1>Lista Dinámica</h1>
-        <div className="exercise-content">
+    <main className="mx-auto flex min-h-screen max-w-6xl items-center px-6 py-12">
+      <section className="glass-card space-y-6">
+        <header className="space-y-2">
+          <h1>Lista Dinámica</h1>
+          <p className="text-slate-300">
+            Agrega y elimina ítems con un panel de control interactivo.
+          </p>
+        </header>
+        <div className="flex flex-col gap-4 md:flex-row md:items-center">
           <input
             type="text"
+            className="input-field"
             placeholder="Escribe un elemento"
             value={value}
             onChange={(event) => setValue(event.target.value)}
           />
-          <button type="button" className="action-btn" onClick={addItem}>
+          <button type="button" className="btn-primary" onClick={addItem}>
             Agregar
           </button>
         </div>
-        <ul id="itemList">
+        <ul className="exercise-section">
           {items.map((item) => (
-            <li key={item.id}>
-              {item.text}
-              <button type="button" onClick={() => removeItem(item.id)}>
+            <li
+              key={item.id}
+              className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+            >
+              <span className="text-slate-100">{item.text}</span>
+              <button
+                type="button"
+                className="btn-secondary"
+                onClick={() => removeItem(item.id)}
+              >
                 Eliminar
               </button>
             </li>
           ))}
         </ul>
-        <a href="index.html" className="back">
+        <a href="index.html" className="btn-ghost">
           ← Volver al menú
         </a>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 
