@@ -1,4 +1,5 @@
-const { useMemo, useState } = React;
+import { useMemo, useState } from "react";
+import { createRoot } from "react-dom/client";
 
 const App = () => {
   const [text, setText] = useState("");
@@ -35,4 +36,5 @@ const App = () => {
   );
 };
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
