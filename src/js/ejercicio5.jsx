@@ -5,8 +5,10 @@ const App = () => {
   const [num1, setNum1] = useState("");
   const [num2, setNum2] = useState("");
   const [result, setResult] = useState("Resultado:");
+  const [lastOperation, setLastOperation] = useState("+");
 
   const calculate = (operation) => {
+    setLastOperation(operation);
     const a = Number(num1);
     const b = Number(num2);
 
@@ -46,6 +48,11 @@ const App = () => {
             placeholder="Número 1"
             value={num1}
             onChange={(event) => setNum1(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                calculate(lastOperation);
+              }
+            }}
           />
           <input
             type="number"
@@ -53,6 +60,11 @@ const App = () => {
             placeholder="Número 2"
             value={num2}
             onChange={(event) => setNum2(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                calculate(lastOperation);
+              }
+            }}
           />
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

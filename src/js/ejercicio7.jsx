@@ -38,6 +38,11 @@ const App = () => {
             placeholder="Longitud"
             value={length}
             onChange={(event) => setLength(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                generatePassword();
+              }
+            }}
           />
           <button type="button" className="btn-primary" onClick={generatePassword}>
             Generar

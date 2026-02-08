@@ -28,6 +28,17 @@ const App = () => {
     };
   }, [isRunning]);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Enter") {
+        setIsRunning((prev) => !prev);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   const handleStop = () => {
     setIsRunning(false);
   };

@@ -15,15 +15,28 @@ const App = () => {
     if (!color) {
       return;
     }
+    document.body.style.backgroundImage = "none";
     document.body.style.backgroundColor = color;
     return () => {
+      document.body.style.backgroundImage = "";
       document.body.style.backgroundColor = "";
     };
   }, [color]);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Enter") {
+        setColor(getRandomColor());
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   return (
     <main className="mx-auto flex min-h-screen max-w-6xl items-center px-6 py-12">
-      <section className="glass-card space-y-6">
+      <section className="glass-card max-w-none space-y-6 md:w-1/2">
         <header className="space-y-2">
           <h1>Cambiador de Color de Fondo</h1>
           <p className="text-slate-300">

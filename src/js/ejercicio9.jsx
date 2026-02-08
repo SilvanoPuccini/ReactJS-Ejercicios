@@ -57,6 +57,11 @@ const App = () => {
             placeholder="Nueva tarea"
             value={value}
             onChange={(event) => setValue(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                addTask();
+              }
+            }}
           />
           <button type="button" className="btn-primary" onClick={addTask}>
             Agregar tarea
@@ -76,7 +81,7 @@ const App = () => {
               />
               <span
                 className={`flex-1 ${
-                  task.completed ? "line-through text-slate-400" : "text-slate-100"
+                  task.completed ? \"line-through text-slate-400\" : \"text-slate-100\"
                 }`}
               >
                 {task.text}

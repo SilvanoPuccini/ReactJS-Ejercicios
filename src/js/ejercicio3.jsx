@@ -34,6 +34,11 @@ const App = () => {
             placeholder="Escribe un elemento"
             value={value}
             onChange={(event) => setValue(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                addItem();
+              }
+            }}
           />
           <button type="button" className="btn-primary" onClick={addItem}>
             Agregar
