@@ -1,6 +1,7 @@
 {
   "name": "reactjs-ejercicios",
   "private": true,
+  "homepage":"https://silvanopuccini.github.io/ReactJS-Ejercicios",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
