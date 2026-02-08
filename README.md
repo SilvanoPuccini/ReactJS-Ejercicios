@@ -12,7 +12,7 @@ ReactJS – Fundamentos, Componentes, Hooks y Persistencia
 ## 🌐 Demo en vivo (GitHub Pages)
 
 🔗 **URL pública del proyecto:**  
-https://silvanopuccini.github.io/ReactJS-Ejercicios/
+Pendiente de despliegue con Vite.
 
 ---
 
@@ -37,20 +37,23 @@ El proyecto sigue una estructura clara y escalable, respetando la consigna y apl
 ```
 REACTJS-EJERCICIOS [MSL-UBUNTU]/
 │
+├── vite.config.js
+├── package.json
+├── .gitignore
 ├── src/
 │   ├── css/
 │   │   └── styles.css
 │   │
 │   └── js/
-│       ├── ejercicio1.js
-│       ├── ejercicio2.js
-│       ├── ejercicio3.js
-│       ├── ejercicio4.js
-│       ├── ejercicio5.js
-│       ├── ejercicio6.js
-│       ├── ejercicio7.js
-│       ├── ejercicio8.js
-│       └── ejercicio9.js
+│       ├── ejercicio1.jsx
+│       ├── ejercicio2.jsx
+│       ├── ejercicio3.jsx
+│       ├── ejercicio4.jsx
+│       ├── ejercicio5.jsx
+│       ├── ejercicio6.jsx
+│       ├── ejercicio7.jsx
+│       ├── ejercicio8.jsx
+│       └── ejercicio9.jsx
 │
 ├── index.html
 ├── js_ejercicio_1.html
@@ -109,20 +112,34 @@ REACTJS-EJERCICIOS [MSL-UBUNTU]/
 ## 🛠 Tecnologías utilizadas
 - HTML5  
 - CSS3  
-- ReactJS (UMD + Babel)  
+- ReactJS  
+- Vite  
+- Tailwind CSS  
 
-## 🚀 Despliegue
+## 🚀 Despliegue con Vite (GitHub Pages)
 
-El proyecto se encuentra desplegado en **GitHub Pages**, cumpliendo con el requisito de enlace público para su corrección.
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+2. Ejecutar en local:
+   ```bash
+   npm run dev
+   ```
+3. Generar build:
+   ```bash
+   npm run build
+   ```
+4. Publicar `dist/` en GitHub Pages.
 
-🔗 https://silvanopuccini.github.io/ReactJS-Ejercicios/
+> Nota: el `base` ya está configurado en `vite.config.js` para `/ReactJS-Ejercicios/`.
 
 ---
 
 ## ✅ Estado del proyecto
 
 ✔ Funcional  
-✔ Desplegado  
+✔ Listo para despliegue  
 ✔ Probado en local y en producción  
 ✔ Listo para evaluación  
 
