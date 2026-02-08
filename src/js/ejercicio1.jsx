@@ -1,4 +1,5 @@
-const { useEffect, useState } = React;
+import { useEffect, useState } from "react";
+import { createRoot } from "react-dom/client";
 
 const getRandomColor = () => {
   const value = Math.floor(Math.random() * 16777215)
@@ -42,4 +43,5 @@ const App = () => {
   );
 };
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);

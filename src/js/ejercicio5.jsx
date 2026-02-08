@@ -1,4 +1,5 @@
-const { useState } = React;
+import { useState } from "react";
+import { createRoot } from "react-dom/client";
 
 const App = () => {
   const [num1, setNum1] = useState("");
@@ -70,4 +71,5 @@ const App = () => {
   );
 };
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);

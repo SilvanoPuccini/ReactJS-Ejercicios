@@ -1,4 +1,5 @@
-const { useEffect, useRef, useState } = React;
+import { useEffect, useRef, useState } from "react";
+import { createRoot } from "react-dom/client";
 
 const formatTime = (totalSeconds) => {
   const hrs = String(Math.floor(totalSeconds / 3600)).padStart(2, "0");
@@ -65,4 +66,5 @@ const App = () => {
   );
 };
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);

@@ -1,4 +1,5 @@
-const { useEffect, useMemo, useState } = React;
+import { useEffect, useMemo, useState } from "react";
+import { createRoot } from "react-dom/client";
 
 const getStoredTasks = () => {
   const stored = localStorage.getItem("tasks");
@@ -91,4 +92,5 @@ const App = () => {
   );
 };
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
