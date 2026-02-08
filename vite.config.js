@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import { resolve } from "node:path";
 
 export default defineConfig({
-  base: "/ReactJS-Ejercicios/",
+  base: "https://silvanopuccini.github.io/ReactJS-Ejercicios/",
   plugins: [react()],
   build: {
     rollupOptions: {
